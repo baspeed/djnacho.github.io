@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Lanzado BASpeed v12 XTreme Edition</title>
+    <meta name="twitter:description" content="Hola a tod@s 😊. Hace ya un tiempo que lancé la última versión de BASpeed y aunque tengo muy poco tiempo para poder actualizar los programas, he sacado huecos de donde no hay para poder traeros esta nueva versión. Se solucionan algunos problemas de la versión antigua (alguno grave y que lastraba la aplicación) y se añaden algunas cosas nuevas.
+">
+    <meta name="twitter:image" content="http://baspeed.github.io/assets/img/tech/hypercar.jpg">
+    <meta name="description" content="Hola a tod@s 😊. Hace ya un tiempo que lancé la última versión de BASpeed y aunque tengo muy poco tiempo para poder actualizar los programas, he sacado huecos de donde no hay para poder traeros esta nueva versión. Se solucionan algunos problemas de la versión antigua (alguno grave y que lastraba la aplicación) y se añaden algunas cosas nuevas.
+">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Lanzado BASpeed v12 XTreme Edition">
+    <meta property="og:image" content="http://baspeed.github.io/assets/img/tech/hypercar.jpg">
+    <meta name="twitter:title" content="Lanzado BASpeed v12 XTreme Edition">
+    <meta property="og:description" content="Hola a tod@s 😊. Hace ya un tiempo que lancé la última versión de BASpeed y aunque tengo muy poco tiempo para poder actualizar los programas, he sacado huecos de donde no hay para poder traeros esta nueva versión. Se solucionan algunos problemas de la versión antigua (alguno grave y que lastraba la aplicación) y se añaden algunas cosas nuevas.">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/scenery/BASpeedx16.png">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet" href="../assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/cookies.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="../assets/css/smoothproducts.css">
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//baspeed.synology.me/matomo/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '2']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+<!--//BLOQUE COOKIES-->
+<div id="barraaceptacion">
+    <div class="inner">
+        Solicitamos su permiso para obtener datos estadísticos de su navegación en esta web, en cumplimiento del Real 
+        Decreto-ley 13/2012. Si continúa navegando consideramos que acepta el uso de cookies.
+        <a href="javascript:void(0);" class="ok" onclick="PonerCookie();"><b>OK</b></a> | 
+        <a href="http://baspeed.bandaancha.eu/politica-privacidad.html" target="_self" class="info">Más información</a>
+    </div>
+</div>
+ 
+<script>
+function getCookie(c_name){
+    var c_value = document.cookie;
+    var c_start = c_value.indexOf(" " + c_name + "=");
+    if (c_start == -1){
+        c_start = c_value.indexOf(c_name + "=");
+    }
+    if (c_start == -1){
+        c_value = null;
+    }else{
+        c_start = c_value.indexOf("=", c_start) + 1;
+        var c_end = c_value.indexOf(";", c_start);
+        if (c_end == -1){
+            c_end = c_value.length;
+        }
+        c_value = unescape(c_value.substring(c_start,c_end));
+    }
+    return c_value;
+}
+ 
+function setCookie(c_name,value,exdays){
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+    document.cookie=c_name + "=" + c_value;
+}
+ 
+if(getCookie('baspeed')!="1"){
+    document.getElementById("barraaceptacion").style.display="block";
+}
+function PonerCookie(){
+    setCookie('baspeed','1',365);
+    document.getElementById("barraaceptacion").style.display="none";
+}
+</script>
+<!--//FIN BLOQUE COOKIES-->
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="../index.html" style="background: url(&quot;../assets/img/BASpeed.png&quot;) no-repeat;background-size: contain;font-weight: bold;text-shadow: 1px 1px rgba(0,0,0,0.27);">BASpeed<br>Software</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="caracteristicas.html">características</a></li>
+                    <li class="nav-item"><a class="nav-link" href="descargas.html">DESCARGAs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">info</a></li>
+                    <li class="nav-item"><a class="nav-link" href="politica-privacidad.html">privacidad</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html" style="color: rgba(0, 0, 0, 0.5);">BLOG</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html" style="color: rgba(0,0,0,0.5);">contacto</a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">enlaces</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="https://bandaancha.eu" target="_blank">Portal de bandaancha.eu</a>
+                            <div class="dropdown-divider"></div><a class="dropdown-item" href="https://bandaancha.eu/foros/comunidad/herramientas/baspeed" target="_blank">Foro oficial de BASpeed</a>
+                            <div class="dropdown-divider"></div><a class="dropdown-item" href="https://baspeed.synology.me/djnacho/" target="_blank">Página de djnacho</a>
+                            <div class="dropdown-divider"></div><a class="dropdown-item" href="https://baspeed.synology.me/almacendia/" target="_blank">Almacén DIA Android</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page blog-post">
+        <section class="clean-block clean-post dark">
+            <div class="container">
+                <div class="block-content">
+                    <div class="post-image" style="background: url(&quot;../assets/img/tech/hypercar.jpg&quot;);background-size: cover;"></div>
+                    <div class="post-body">
+                        <h3><strong>Lanzado BASpeed v12 XTreme Edition</strong><br></h3>
+                        <div class="post-info"><span>Por <a href="../sobre-nosotros.html">djnacho</a></span><span>08 Septiembre, 2021</span></div>
+                        <p class="text-justify" style="text-align: justify;">Hola a tod@s 😊. Hace ya un tiempo que lancé la última versión de BASpeed y <a href="https://bandaancha.eu/foros/noticia-poco-triste-1743484" target="_blank">aunque tengo muy poco tiempo para poder actualizar los programas</a>, he sacado huecos de donde no hay para poder traeros esta nueva versión. Se solucionan algunos problemas de la versión antigua (alguno grave y que lastraba la aplicación) y se añaden algunas cosas nuevas.<br><br>Podéis descargaros la nueva versión <a href="http://baspeed.bandaancha.eu/descargas.html" target="_blank">en la página de descargas de este site oficial</a>. Paso a comentaros los cambios de esta nueva versión:<br><br>▶ Se ha actualizado el instalador de BASpeed a la última versión de Inno Setup disponible (6.2.0). Ahora se ha actualizado la pantalla de instalación con un tema más moderno (en una próxima versión incluiré un fichero con la licencia de BASpeed y los agradecimientos que son muchos 😊).<br><br>▶ Se ha actualizado el test de velocidad, para eliminar el control anterior de gráfica de velocidad (se muestra pulsando CTRL+I) ya que ha expirado la licencia que tenía de ese control. En su lugar he colocado otro control y espero en una próxima actualización poder poner otro control que permita el gráfico de barras característico de BASpeed. También se han solucionado algunos problemas con algunos tests de velocidad.<br><br>▶ Se ha actualizado el test de tracert y ahora funciona perfectamente (en la versión anterior se detenía nada más empezar). Tengo que decir que de momento sólo funciona bajo IPv4 aunque puedo modificarlo en cualquier momento para que funcione bajo IPv6 también. Ahora muestra todos los saltos de los paquetes, así como el trayecto que sigue la información mostrando la ruta en el mapa superior.<br><br>▶ Se ha actualizado el test de ping para eliminar algún fallo menor y optimizar el código interno.<br><br>▶ Se ha incluido en la instalación toda la suite completa de BASpeed v8, que contiene módulos muy interesantes que no fueron incluidos en BASpeed 2018 y que he considerado muy interesante tener las dos suites juntas para tener todas las herramientas de diagnostico e información a mano.<br><br>He de decir antes de terminar que esta nueva versión no actualiza la versión previa por lo que si queréis tener una única versión de la suite debéis desinstalar BASpeed 2018 antes de instalar BASpeed v12.<br><br>Y de momento eso es todo. No es mucho (para vosotros), pero para mi es un mundo dejar las tres aplicaciones principales (test de velocidad, ping y tracert) funcionales y sin errores, ya que como he comentado anteriormente mi tiempo para poder desarrollar aplicaciones ha caído en picado, pero aún así intento seguir en la brecha todo lo que puedo.<br><br>Muchas gracias a todos aquellos que utilizan mi suite (o la han utilizado en el pasado). Para mi es el mayor honor que la tengáis instalada y os sea de utilidad. Un saludo a todos 😊 y nos vemos próximamente 😉.</p>
+                    </div>
+                    <div class="post-body" style="background-color: #ffffff;"><div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://baspeed-servidor-privado.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h5>Primeros pasos</h5>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li></li>
+                        <li><a href="../descargas.html">Descargas</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Sobre nosotros</h5>
+                    <ul>
+                        <li></li>
+                        <li><a href="../sobre-nosotros.html">Sobre nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Soporte</h5>
+                    <ul>
+                        <li><a href="https://bandaancha.eu/foros/comunidad/herramientas/baspeed" target="_blank">Foro oficial</a></li>
+                        <li><a href="https://bandaancha.eu" target="_blank">Portal de bandaancha.eu</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li><a href="../politica-privacidad.html">Política de privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2006-2021 djnacho &amp; BASpeed Software</p>
+        </div>
+    </footer>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="../assets/js/smoothproducts.min.js"></script>
+    <script src="../assets/js/theme.js"></script>
+</body>
+
+</html>

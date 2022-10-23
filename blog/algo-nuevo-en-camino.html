@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Actualización del Test de Velocidad</title>
+    <meta property="og:type" content="article">
+    <meta name="twitter:description" content="Hola a todos 😊. Acabo de subir tanto al site oficial como a la copia del site oficial una nueva versión del test de velocidad de BASpeed. Esta nueva versión no trae nada nuevo como tal, sino que cambia uno de los tests de velocidad ya existentes por otro.">
+    <meta name="twitter:image" content="http://baspeed.github.io/assets/img/tech/googlemaps.jpg">
+    <meta property="og:description" content="Hola a todos 😊. Acabo de subir tanto al site oficial como a la copia del site oficial una nueva versión del test de velocidad de BASpeed. Esta nueva versión no trae nada nuevo como tal, sino que cambia uno de los tests de velocidad ya existentes por otro.">
+    <meta property="og:image" content="http://baspeed.github.io/assets/img/tech/googlemaps.jpg">
+    <meta name="twitter:title" content="Actualización del test de velocidad">
+    <meta name="description" content="Hola a todos 😊. Acabo de subir tanto al site oficial como a la copia del site oficial una nueva versión del test de velocidad de BASpeed. Esta nueva versión no trae nada nuevo como tal, sino que cambia uno de los tests de velocidad ya existentes por otro.">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/scenery/BASpeedx16.png">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet" href="../assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/cookies.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="../assets/css/smoothproducts.css">
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//baspeed.synology.me/matomo/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '2']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+<!--//BLOQUE COOKIES-->
+<div id="barraaceptacion">
+    <div class="inner">
+        Solicitamos su permiso para obtener datos estadísticos de su navegación en esta web, en cumplimiento del Real 
+        Decreto-ley 13/2012. Si continúa navegando consideramos que acepta el uso de cookies.
+        <a href="javascript:void(0);" class="ok" onclick="PonerCookie();"><b>OK</b></a> | 
+        <a href="http://baspeed.bandaancha.eu/politica-privacidad.html" target="_self" class="info">Más información</a>
+    </div>
+</div>
+ 
+<script>
+function getCookie(c_name){
+    var c_value = document.cookie;
+    var c_start = c_value.indexOf(" " + c_name + "=");
+    if (c_start == -1){
+        c_start = c_value.indexOf(c_name + "=");
+    }
+    if (c_start == -1){
+        c_value = null;
+    }else{
+        c_start = c_value.indexOf("=", c_start) + 1;
+        var c_end = c_value.indexOf(";", c_start);
+        if (c_end == -1){
+            c_end = c_value.length;
+        }
+        c_value = unescape(c_value.substring(c_start,c_end));
+    }
+    return c_value;
+}
+ 
+function setCookie(c_name,value,exdays){
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+    document.cookie=c_name + "=" + c_value;
+}
+ 
+if(getCookie('baspeed')!="1"){
+    document.getElementById("barraaceptacion").style.display="block";
+}
+function PonerCookie(){
+    setCookie('baspeed','1',365);
+    document.getElementById("barraaceptacion").style.display="none";
+}
+</script>
+<!--//FIN BLOQUE COOKIES-->
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="../index.html" style="background: url(&quot;../assets/img/BASpeed.png&quot;) no-repeat;background-size: contain;font-weight: bold;text-shadow: 1px 1px rgba(0,0,0,0.27);">BASpeed<br>Software</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="caracteristicas.html">características</a></li>
+                    <li class="nav-item"><a class="nav-link" href="descargas.html">DESCARGAs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">info</a></li>
+                    <li class="nav-item"><a class="nav-link" href="politica-privacidad.html">privacidad</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html" style="color: rgba(0, 0, 0, 0.5);">BLOG</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html" style="color: rgba(0,0,0,0.5);">contacto</a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">enlaces</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="https://bandaancha.eu" target="_blank">Portal de bandaancha.eu</a>
+                            <div class="dropdown-divider"></div><a class="dropdown-item" href="https://bandaancha.eu/foros/comunidad/herramientas/baspeed" target="_blank">Foro oficial de BASpeed</a>
+                            <div class="dropdown-divider"></div><a class="dropdown-item" href="https://baspeed.synology.me/djnacho/" target="_blank">Página de djnacho</a>
+                            <div class="dropdown-divider"></div><a class="dropdown-item" href="https://baspeed.synology.me/almacendia/" target="_blank">Almacén DIA Android</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page blog-post">
+        <section class="clean-block clean-post dark">
+            <div class="container">
+                <div class="block-content">
+                    <div class="post-image" style="background: url(&quot;../assets/img/tech/ba.png&quot;);background-size: cover;"></div>
+                    <div class="post-body">
+                        <h3><strong>Algo nuevo en camino...</strong><br></h3>
+                        <div class="post-info"><span>Por <a href="../sobre-nosotros.html">djnacho</a></span><span>13&nbsp; Septiembre, 2020</span></div>
+                        <p style="text-align: justify;">Hola a todos 😊. Ayer publiqué <a href="https://bandaancha.eu/foros/otra-cosa-viene-camino-1740662"><strong>una noticia en bandaancha.eu</strong></a>, indicando que estaba creando una nueva versión de la aplicación de <a href="https://play.google.com/store/apps/details?id=com.embarcadero.bandaancha"><strong>noticias bandaancha.eu</strong></a>. En esa noticia, publiqué las fotos del aspecto actual de la aplicación, y del nuevo aspecto que estaba tomando la nueva versión de la aplicación.<br><br>Hay que tener en cuenta que cambian muchas cosas: La apariencia gráfica cambia por completo, ahora se parece mucho más a las aplicaciones que muchos podemos ver en la <a href="https://play.google.com"><strong>Play Store</strong></a> destinadas a noticias. Es mucho más gráfica, ya que en vez de una listbox clásica, se ha incluido una lista de tarjetas personalizada de android (parecido a lo que aparece <a href="https://www.blog.google/products/search/introducing-google-discover/"><strong>en la página de Discover</strong></a> de la aplicación <a href="https://www.google.es"><strong>Google</strong></a>).<br><br>Se han incluido en esta versión las imágenes de las noticias, o si esta no incluye ninguna imagen, se incluye una imagen estándar (la misma que encabeza este artículo del blog).<br><br>Se puede acceder a cada noticia pulsando sobre el titular de la misma, o bien sobre su imagen.<br><br>El nuevo menú deslizante, está completamente personalizado para esta versión.&nbsp;<br><br>Para que os hagáis una idea del potencial de la nueva versión, os muestro un video que he subido a YouTube, y también algunas capturas de pantalla:</p><iframe class="d-flex d-xl-flex align-content-center mx-auto" allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/kghRMP6GwhQ" width="560" height="315"></iframe><a class="text-white" href="../assets/img/tech/capturapantalla_baeu1.png">Link<img src="../assets/img/tech/capturapantalla_baeu1.png" width="300" style="margin-top: 40px;margin-right: 40px;margin-left: 100px;"></a><a class="text-white" href="../assets/img/tech/capturapantalla_baeu2.png">Link<img src="../assets/img/tech/capturapantalla_baeu2.png" width="300" style="margin-top: 40px;"></a>
+                        <p class="text-justify"><br>De momento es una versión preliminar de la aplicación y hay algunas cosas que tocar y cambiar para quedar la aplicación 100% como queréis vosotros y yo. Pero la aplicación es totalmente funcional, y en breve se subirá a la Play Store como versión beta de la aplicación (para probarla sólo tenéis que uniros al programa beta). Cuando esté disponible como versión beta, <a href="https://bandaancha.eu/foros/comunidad/herramientas/baspeed"><strong>os avisaré a través del foro oficial de la app</strong></a> (el mismo que el de <a href="http://baspeed.bandaancha.eu"><strong>BASpeed</strong></a>).<br><br>Un saludo a todos 😊 y ya falta menos para que la nueva app vea la luz 👍😊</p>
+                    </div>
+                    <div class="post-body" style="background-color: #ffffff;"><div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://baspeed-servidor-privado.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h5>Primeros pasos</h5>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li></li>
+                        <li><a href="../descargas.html">Descargas</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Sobre nosotros</h5>
+                    <ul>
+                        <li></li>
+                        <li><a href="../sobre-nosotros.html">Sobre nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Soporte</h5>
+                    <ul>
+                        <li><a href="https://bandaancha.eu/foros/comunidad/herramientas/baspeed" target="_blank">Foro oficial</a></li>
+                        <li><a href="https://bandaancha.eu" target="_blank">Portal de bandaancha.eu</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li><a href="../politica-privacidad.html">Política de privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2006-2021 djnacho &amp; BASpeed Software</p>
+        </div>
+    </footer>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="../assets/js/smoothproducts.min.js"></script>
+    <script src="../assets/js/theme.js"></script>
+</body>
+
+</html>

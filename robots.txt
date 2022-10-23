@@ -1,0 +1,10 @@
+User-agent: *
+
+Disallow: /wp-content/
+Disallow: /assets/
+Disallow: /imgs/
+Allow: /
+
+
+
+Sitemap: https://baspeed.github.io/sitemap.xml
