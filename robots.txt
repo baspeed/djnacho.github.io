@@ -7,4 +7,4 @@ Allow: /
 
 
 
-Sitemap: https://baspeed.github.io/sitemap.xml
+Sitemap: https://baspeed.synology.me/sitemap.xml
